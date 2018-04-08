@@ -65,8 +65,7 @@ h1 {
 <h1 id="loaderw"> Welcome to CCAIndustries Job Simulation </h1>
 <div id="loader"></div>
 	
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
+<div style="display:none;" id="jobp" class="animate-bottom">
   <!DOCTYPE html>
 <html lang="en">
 
@@ -103,6 +102,7 @@ h1 {
 
 </head>
 <body>
+	
   <div id="tur">
     <h2>Choose a State</h2>
     <div class="dropdown">
@@ -552,4 +552,15 @@ h1 {
       }
     }
   </script>
+		<script>
+var myVar;
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("jobp").style.display = "block";
+  document.getElementById("loaderw").style.display = "none";
+}
 </body>
+	</div>
