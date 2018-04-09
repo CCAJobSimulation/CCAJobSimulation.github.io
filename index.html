@@ -1,74 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" href="https://lh3.googleusercontent.com/-T-ouPHSaeWU/Wo4RZJ8AVdI/AAAAAAAAAD4/PfGFXFCYKAQlNQBEPDjI93eOur0xEZG2QCEwYBhgL/w140-h140-p/cca.png" sizes="16x16">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-	background-color: light gray;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid blue;
-  border-right: 16px solid gray;
-  border-bottom: 16px solid blue;
-  border-left: 16px solid gray;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
-}
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
-}
-#myDiv {
-  display: none;
-  text-align: center;
-}
-h1 {
-    text-align: center;
-   
-}
-</style>
-</head>
-<body onload="myFunction()" style="margin:0;">
-<h1 id="loaderw"> Welcome to CCAIndustries Job Simulation </h1>
-<div id="loader"></div>
-	
-<div style="display:none;" id="jobp" class="animate-bottom">
-  <!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
 <head>
 	<link rel="icon" href="https://lh3.googleusercontent.com/-T-ouPHSaeWU/Wo4RZJ8AVdI/AAAAAAAAAD4/PfGFXFCYKAQlNQBEPDjI93eOur0xEZG2QCEwYBhgL/w140-h140-p/cca.png" sizes="16x16">
 
@@ -100,9 +30,13 @@ h1 {
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <metaname="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+
 <body>
-	
   <div id="tur">
     <h2>Choose a State</h2>
     <div class="dropdown">
@@ -110,7 +44,7 @@ h1 {
       <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
         <!--States-->
-        <div id="statess">
+        <div id="statess" onclick="stsFunction()">
           <a class="button" id="al" onclick="alFunction()" readonly>Alabama</a>
           <!--End-->
           <a class="button" id="ak" onclick="akFunction()" readonly>Alaska</a>
@@ -133,83 +67,83 @@ h1 {
           <!--End-->
           <a class="button" id="hi" onclick="hiFunction()" readonly>Hawaii</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Idaho</a>
+          <a class="button" id="id" onclick="idFunction()" readonly>Idaho</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Illinois</a>
+          <a class="button" id="il" onclick="ilFunction()" readonly>Illinois</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Indiana</a>
+          <a class="button" id="in" onclick="inFunction()" readonly>Indiana</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Iowa</a>
+          <a class="button" id="ia" onclick="iaFunction()" readonly>Iowa</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Kansas</a>
+          <a class="button" id="ks" onclick="ksFunction()" readonly>Kansas</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Kentucky</a>
+          <a class="button" id="ky" onclick="kyFunction()" readonly>Kentucky</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Louisiana</a>
+          <a class="button" id="la" onclick="laFunction()" readonly>Louisiana</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Maine</a>
+          <a class="button" id="me" onclick="meFunction()" readonly>Maine</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Maryland</a>
+          <a class="button" id="md" onclick="mdFunction()" readonly>Maryland</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Massachusetts</a>
+          <a class="button" id="ma" onclick="maFunction()" readonly>Massachusetts</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Michigan</a>
+          <a class="button" id="mi" onclick="miFunction()" readonly>Michigan</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Minnesota</a>
+          <a class="button" id="mn" onclick="mnFunction()" readonly>Minnesota</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Mississippi</a>
+          <a class="button" id="ms" onclick="msFunction()" readonly>Mississippi</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Missouri</a>
+          <a class="button" id="mo" onclick="moFunction()" readonly>Missouri</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Montana</a>
+          <a class="button" id="mt" onclick="mtFunction()" readonly>Montana</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Nebraska</a>
+          <a class="button" id="ne" onclick="neFunction()" readonly>Nebraska</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Nevada</a>
+          <a class="button" id="nv" onclick="nvFunction()" readonly>Nevada</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>New Hampshire</a>
+          <a class="button" id="nh" onclick="nhFunction()" readonly>New Hampshire</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>New Jersey</a>
+          <a class="button" id="nj" onclick="njFunction()" readonly>New Jersey</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>New Mexico</a>
+          <a class="button" id="nm" onclick="nmFunction()" readonly>New Mexico</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>New York</a>
+          <a class="button" id="ny" onclick="nyFunction()" readonly>New York</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>North Carolina</a>
+          <a class="button" id="nc" onclick="ncFunction()" readonly>North Carolina</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>North Dakota</a>
+          <a class="button" id="nd" onclick="ndFunction()" readonly>North Dakota</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Ohio</a>
+          <a class="button" id="oh" onclick="ohFunction()" readonly>Ohio</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Oklahoma</a>
+          <a class="button" id="ok" onclick="okFunction()" readonly>Oklahoma</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Oregon</a>
+          <a class="button" id="or" onclick="orFunction()" readonly>Oregon</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Pennsylvania</a>
+          <a class="button" id="pa" onclick="paFunction()" readonly>Pennsylvania</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Rhode Island</a>
+          <a class="button" id="ri" onclick="riFunction()" readonly>Rhode Island</a>
           <!--End-->
           <a class="button" id="sc" onclick="scFunction()" readonly>South Carolina</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>South Dakota</a>
+          <a class="button" id="sd" onclick="sdFunction()" readonly>South Dakota</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Tennessee</a>
+          <a class="button" id="tn" onclick="tnFunction()" readonly>Tennessee</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Texas</a>
+          <a class="button" id="tx" onclick="txFunction()" readonly>Texas</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Utah</a>
+          <a class="button" id="ut" onclick="utFunction()" readonly>Utah</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Vermont</a>
+          <a class="button" id="vt" onclick="vtFunction()" readonly>Vermont</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Virginia</a>
+          <a class="button" id="va" onclick="vaFunction()" readonly>Virginia</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Washington</a>
+          <a class="button" id="wa" onclick="waFunction()" readonly>Washington</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>West Virginia</a>
+          <a class="button" id="wv" onclick="wvFunction()" readonly>West Virginia</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Wisconsin</a>
+          <a class="button" id="wi" onclick="wiFunction()" readonly>Wisconsin</a>
           <!--End-->
-          <a class="button" id="sc" onclick="scFunction()" readonly>Wyoming</a>
+          <a class="button" id="wy" onclick="wyFunction()" readonly>Wyoming</a>
           <!--End-->
           <!--End States-->
         </div>
@@ -223,13 +157,14 @@ h1 {
         <button class="dropbtn">Field</button>
         <div class="dropdown-content">
           <a id="eng" onclick="engFunction()">Engineering</a>
-          <a id="cs" href="#">Computer Science</a>
-          <a id="md" href="#">Medicine</a>
-          <a id="fin" href="#">Finance</a>
-          <a id="edu" href="#">Education</a>
+          <a id="cs" onclick="csFunction()">Computer Science</a>
+          <a id="md" onclick="mdFunction()">Medicine</a>
+          <a id="fin" onclick="finFunction()">Finance</a>
+          <a id="edu" onclick="eduFunction()">Legal</a>
         </div>
       </div>
     </div>
+    <!--Start Applications-->
     <div id="uio">
       <div class="w3-container">
         <center>
@@ -241,7 +176,7 @@ h1 {
             <button class=" w3-xlarge w3-right lig">apply</button>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
             <div class="w3-bar-item">
-              <span class="w3-large">Mike</span><br>
+              <span class="w3-large">SI Group</span><br>
               <span class="fy1"></span>
             </div>
           </li>
@@ -250,7 +185,7 @@ h1 {
             <button class="lig w3-xlarge w3-right">apply</button>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
             <div class="w3-bar-item">
-              <span class="w3-large">Jill</span><br>
+              <span class="w3-large">Husqvarna</span><br>
               <span class="fy1"></span>
             </div>
           </li>
@@ -259,7 +194,7 @@ h1 {
             <button class=" w3-xlarge w3-right lig">apply</button>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
             <div class="w3-bar-item">
-              <span class="w3-large">Jane</span><br>
+              <span class="w3-large">Zeus</span><br>
               <span class="fy1"></span>
             </div>
           </li>
@@ -267,7 +202,7 @@ h1 {
             <button class=" w3-xlarge w3-right lig">apply</button>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
             <div class="w3-bar-item">
-              <span class="w3-large">Jane</span><br>
+              <span class="w3-large">GKN</span><br>
               <span class="fy1"></span>
             </div>
           </li>
@@ -275,7 +210,7 @@ h1 {
             <button class=" w3-xlarge w3-right lig">apply</button>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
             <div class="w3-bar-item">
-              <span class="w3-large">Jane</span><br>
+              <span class="w3-large">Spectrum</span><br>
               <span class="fy1"></span>
             </div>
           </li>
@@ -283,7 +218,7 @@ h1 {
             <button class=" w3-xlarge w3-right lig">apply</button>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
             <div class="w3-bar-item">
-              <span class="w3-large">Jane</span><br>
+              <span class="w3-large">JTEKT</span><br>
               <span class="fy1"></span>
             </div>
           </li>
@@ -291,6 +226,255 @@ h1 {
       </div>
     </div>
   </div>
+  <!--End-->
+  <div id="uio1">
+    <div class="w3-container">
+      <center>
+        <h2>Job Listings </h2>
+      </center>
+
+      <ul class="w3-ul w3-card-4 jilm">
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">BAE systems</span><br>
+            <span class="fy2"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class="lig w3-xlarge w3-right">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">DXC technology</span><br>
+            <span class="fy2"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Mantech International</span><br>
+            <span class="fy2"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Yokogawa Electric</span><br>
+            <span class="fy2"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Engility</span><br>
+            <span class="fy2"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Siemens</span><br>
+            <span class="fy2"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <!--End-->
+  <div id="uio2">
+    <div class="w3-container">
+      <center>
+        <h2>Job Listings </h2>
+      </center>
+
+      <ul class="w3-ul w3-card-4 jilm">
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Nomad Health</span><br>
+            <span class="fy3"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class="lig w3-xlarge w3-right">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">The Inline Group</span><br>
+            <span class="fy3"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Merritt Hawkings</span><br>
+            <span class="fy3"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Essentia Health</span><br>
+            <span class="fy3"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Corizon Health</span><br>
+            <span class="fy3"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Summa Health System</span><br>
+            <span class="fy3"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <!--End-->
+  <div id="uio3">
+    <div class="w3-container">
+      <center>
+        <h2>Job Listings </h2>
+      </center>
+
+      <ul class="w3-ul w3-card-4 jilm">
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Republic Finance</span><br>
+            <span class="fy4"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class="lig w3-xlarge w3-right">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">World vision</span><br>
+            <span class="fy4"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Mutual of Omaha</span><br>
+            <span class="fy4"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Bank of America</span><br>
+            <span class="fy4"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">First Citizens Bank</span><br>
+            <span class="fy4"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Morgan Stanley</span><br>
+            <span class="fy4"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <!--End-->
+  <div id="uio4">
+    <div class="w3-container">
+      <center>
+        <h2>Job Listings </h2>
+      </center>
+
+      <ul class="w3-ul w3-card-4 jilm">
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">BCG Attorney Search</span><br>
+            <span class="fy5"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class="lig w3-xlarge w3-right">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Manpower Group</span><br>
+            <span class="fy5"></span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">ACLU</span><br>
+            <span class="fy5"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Deloitte</span><br>
+            <span class="fy5"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">State Farm</span><br>
+            <span class="fy5"></span>
+          </div>
+        </li>
+        <li class="w3-bar">
+          <button class=" w3-xlarge w3-right lig">apply</button>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYfL44aDqOZpKj3xLWqWCTodJQn8w7X3s0qiszSSzwNfm_KL6" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">Allstate</span><br>
+            <span class="fy5"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
   <style>
     #myInput {
       border-box: box-sizing;
@@ -394,7 +578,39 @@ h1 {
       display: none;
     }
 
+    #uio1 {
+      display: none;
+    }
+
+    #uio2 {
+      display: none;
+    }
+
+    #uio3 {
+      display: none;
+    }
+
+    #uio4 {
+      display: none;
+    }
+
     #eng {
+      cursor: pointer;
+    }
+
+    #cs {
+      cursor: pointer;
+    }
+
+    #md {
+      cursor: pointer;
+    }
+
+    #fin {
+      cursor: pointer;
+    }
+
+    #edu {
       cursor: pointer;
     }
 
@@ -414,7 +630,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function akFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("ak").textContent;
@@ -425,7 +667,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function azFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("az").textContent;
@@ -436,7 +704,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function arFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("ar").textContent;
@@ -447,7 +741,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function caFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("ca").textContent;
@@ -458,7 +778,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function coFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("co").textContent;
@@ -469,7 +815,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function ctFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("ct").textContent;
@@ -480,7 +852,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function deFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("de").textContent;
@@ -491,7 +889,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function flFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("fl").textContent;
@@ -502,7 +926,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function gaFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("ga").textContent;
@@ -513,7 +963,33 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
+
     function hiFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("hi").textContent;
@@ -524,6 +1000,1472 @@ h1 {
       document.getElementsByClassName("fy1")[3].innerHTML = x;
       document.getElementsByClassName("fy1")[4].innerHTML = x;
       document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function idFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("id").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function ilFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("il").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function inFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("in").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function iaFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ia").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function ksFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ks").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function kyFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ky").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function laFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("la").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function meFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("me").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function mdFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("md").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function maFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ma").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function miFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("mi").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function mnFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("mn").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function msFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ms").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function moFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("mo").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function mtFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("mt").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function neFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ne").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function nvFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("nv").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function nhFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("nh").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function njFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("nj").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function nmFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("nm").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function nyFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ny").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function ncFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("nc").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function ndFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("nd").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function ohFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("oh").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function okFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ok").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function orFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("or").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function paFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("pa").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function riFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ri").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function scFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("sc").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function sdFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("sd").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+	   function tnFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("tn").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+	  function txFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("tx").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function utFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("ut").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function vtFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("vt").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function vaFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("va").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function waFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("wa").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function wvFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("wv").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function wiFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("wi").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
+    }
+
+    function wyFunction() {
+      document.getElementById("eru").style.display = "block";
+      var x = document.getElementById("wy").textContent;
+      document.getElementById("statess").style.display = "none";
+      document.getElementsByClassName("fy1")[0].innerHTML = x;
+      document.getElementsByClassName("fy1")[1].innerHTML = x;
+      document.getElementsByClassName("fy1")[2].innerHTML = x;
+      document.getElementsByClassName("fy1")[3].innerHTML = x;
+      document.getElementsByClassName("fy1")[4].innerHTML = x;
+      document.getElementsByClassName("fy1")[5].innerHTML = x;
+      document.getElementsByClassName("fy2")[0].innerHTML = x;
+      document.getElementsByClassName("fy2")[1].innerHTML = x;
+      document.getElementsByClassName("fy2")[2].innerHTML = x;
+      document.getElementsByClassName("fy2")[3].innerHTML = x;
+      document.getElementsByClassName("fy2")[4].innerHTML = x;
+      document.getElementsByClassName("fy2")[5].innerHTML = x;
+      document.getElementsByClassName("fy3")[0].innerHTML = x;
+      document.getElementsByClassName("fy3")[1].innerHTML = x;
+      document.getElementsByClassName("fy3")[2].innerHTML = x;
+      document.getElementsByClassName("fy3")[3].innerHTML = x;
+      document.getElementsByClassName("fy3")[4].innerHTML = x;
+      document.getElementsByClassName("fy3")[5].innerHTML = x;
+      document.getElementsByClassName("fy4")[0].innerHTML = x;
+      document.getElementsByClassName("fy4")[1].innerHTML = x;
+      document.getElementsByClassName("fy4")[2].innerHTML = x;
+      document.getElementsByClassName("fy4")[3].innerHTML = x;
+      document.getElementsByClassName("fy4")[4].innerHTML = x;
+      document.getElementsByClassName("fy4")[5].innerHTML = x;
+      document.getElementsByClassName("fy5")[0].innerHTML = x;
+      document.getElementsByClassName("fy5")[1].innerHTML = x;
+      document.getElementsByClassName("fy5")[2].innerHTML = x;
+      document.getElementsByClassName("fy5")[3].innerHTML = x;
+      document.getElementsByClassName("fy5")[4].innerHTML = x;
+      document.getElementsByClassName("fy5")[5].innerHTML = x;
+      document.getElementById("myInput").value = x;
     }
   </script>
   <script>
@@ -533,9 +2475,36 @@ h1 {
       document.getElementById("tur").style.display = "none";
     }
 
+    function csFunction() {
+      document.getElementById("fuy").style.display = "none";
+      document.getElementById("uio1").style.display = "block";
+      document.getElementById("tur").style.display = "none";
+    }
+
+    function mdFunction() {
+      document.getElementById("fuy").style.display = "none";
+      document.getElementById("uio2").style.display = "block";
+      document.getElementById("tur").style.display = "none";
+    }
+
+    function finFunction() {
+      document.getElementById("fuy").style.display = "none";
+      document.getElementById("uio3").style.display = "block";
+      document.getElementById("tur").style.display = "none";
+    }
+
+    function eduFunction() {
+      document.getElementById("fuy").style.display = "none";
+      document.getElementById("uio4").style.display = "block";
+      document.getElementById("tur").style.display = "none";
+    }
+
     function dropdownFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
+    
+      
+    
 
     function filterFunction() {
       var input, filter, ul, li, a, i;
@@ -552,15 +2521,4 @@ h1 {
       }
     }
   </script>
-		<script>
-var myVar;
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("jobp").style.display = "block";
-  document.getElementById("loaderw").style.display = "none";
-}
 </body>
-	</div>
