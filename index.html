@@ -1,42 +1,17 @@
-<!DOCTYPE HTML>
-<head>
-	<link rel="icon" href="https://lh3.googleusercontent.com/-T-ouPHSaeWU/Wo4RZJ8AVdI/AAAAAAAAAD4/PfGFXFCYKAQlNQBEPDjI93eOur0xEZG2QCEwYBhgL/w140-h140-p/cca.png" sizes="16x16">
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <metaname="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>CCA-5 Steps To Getting A Job</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <metaname="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<center>
+
 <body>
+  
+  <!--ipad--><center>
+  <div id="welcomew">
+    <h1>Welcome to the CCA Industies job simulation!</h1>
+    <span id="welcomes"> This job simulation is designed to assist and prepare job seekers for the job application process. You are encouraged to complete all of the steps to get the most out of this simulation. In this simulation, you will rcieve information that will guide you on every step in the job application process. After reading theinformation given, you should complete the specified task or assignment to show your mastery in that part of the job application process. Good luck and thank you for choosing CCA industries.</span>
+  </div></center>
+    <!--/ipad--><center>
   <div id="tur">
     <h2>Choose a State</h2>
     <div class="dropdown">
@@ -149,7 +124,7 @@
         </div>
       </div>
     </div>
-  </div>
+	</div>
   <div id="eru">
     <div id="fuy">
       <h2>Choose a Field</h2>
@@ -163,7 +138,7 @@
           <a id="edu" onclick="eduFunction()">Legal</a>
         </div>
       </div>
-    </div>
+	  </div></center>
     <!--Start Applications-->
     <div id="uio">
       <div class="w3-container">
@@ -474,8 +449,9 @@
     </div>
   </div>
   </div>
-	</center>
+
   <style>
+    w3-large{border-radius:30px;}
     #myInput {
       border-box: box-sizing;
       background-image: url('https://www.w3schools.com/howto/searchicon.png');
@@ -2136,7 +2112,8 @@
       document.getElementsByClassName("fy5")[5].innerHTML = x;
       document.getElementById("myInput").value = x;
     }
-	   function tnFunction() {
+
+    function tnFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("tn").textContent;
       document.getElementById("statess").style.display = "none";
@@ -2172,7 +2149,8 @@
       document.getElementsByClassName("fy5")[5].innerHTML = x;
       document.getElementById("myInput").value = x;
     }
-	  function txFunction() {
+
+    function txFunction() {
       document.getElementById("eru").style.display = "block";
       var x = document.getElementById("tx").textContent;
       document.getElementById("statess").style.display = "none";
@@ -2470,30 +2448,35 @@
   </script>
   <script>
     function engFunction() {
+      document.getElementById("welcomew").style.display = "none";
       document.getElementById("fuy").style.display = "none";
       document.getElementById("uio").style.display = "block";
       document.getElementById("tur").style.display = "none";
     }
 
     function csFunction() {
+      document.getElementById("welcomew").style.display = "none";
       document.getElementById("fuy").style.display = "none";
       document.getElementById("uio1").style.display = "block";
       document.getElementById("tur").style.display = "none";
     }
 
     function mdFunction() {
+      document.getElementById("welcomew").style.display = "none";
       document.getElementById("fuy").style.display = "none";
       document.getElementById("uio2").style.display = "block";
       document.getElementById("tur").style.display = "none";
     }
 
     function finFunction() {
+      document.getElementById("welcomew").style.display = "none";
       document.getElementById("fuy").style.display = "none";
       document.getElementById("uio3").style.display = "block";
       document.getElementById("tur").style.display = "none";
     }
 
     function eduFunction() {
+      document.getElementById("welcomew").style.display = "none";
       document.getElementById("fuy").style.display = "none";
       document.getElementById("uio4").style.display = "block";
       document.getElementById("tur").style.display = "none";
