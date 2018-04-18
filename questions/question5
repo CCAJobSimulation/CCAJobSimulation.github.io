@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+
+  <head>
+    <link rel="icon" href="https://lh3.googleusercontent.com/-T-ouPHSaeWU/Wo4RZJ8AVdI/AAAAAAAAAD4/PfGFXFCYKAQlNQBEPDjI93eOur0xEZG2QCEwYBhgL/w140-h140-p/cca.png" sizes="16x16">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <img src="../img/test.png"id="imgr" style="width:50%;height:50%;">
+    <style>
+      #imgr{
+        float:right;
+      }
+    </style>
+    <h2>Question 5.</h2><strong id="w1" class="wer"><div class="whyw"> Explanation:</div></strong><span class="wer" id="meu">This is because</span>
+           
+           
+  
+<input type="checkbox" id="myRadio1"><span>(1) Employers usually reject applicants after 5 mistakes</span><span id="demo1" class="fa giu"></span></br>
+<!--End 1-->
+    <input type="checkbox" id="myRadio2"><span>(2) It is ok to leave some spaces blank on your application</span><span id="demo2" class="fa giu"></span></br>
+<!--End 2-->
+    <input type="checkbox" id="myRadio3"><span>(3) Would being a track and field runner be a good experience to include?</span><span id="demo3" class="fa giu"></span></br>
+<!--End 3-->
+    <input type="checkbox" id="myRadio4"><span>(4) Your older sibling would be a great reference to include.</span><span id="demo4" class="fa giu"></span></br>
+<!--End 4-->
+    <input type="checkbox" id="myRadio5"><span>(5) What is .....</span><span id="demo5" class="fa giu"></span></br>
+<!--End 5-->
+    <button id="gyu" onclick="myFunction1(); myFunction2(); myFunction3(); myFunction4(); myFunction5();  myFunctione(); myFunctionw()">Submit</button>
+<form action="index.html"> <button id="uyg" onclick="">Next question</button></form>
+    <style>
+      #meu{
+        color:black;
+        font-weight:150%; 
+        border-bottom:3px solid lightgray;
+      }
+      #uyg {
+        display: none;
+      }
+      .wer{
+        display:none;
+        
+       
+      }
+      body {
+    background-color: #DADADA;
+}
+      .whyw {
+        color: #606060;
+        border-top: 3px solid lightgray;
+      }
+      .giu{
+        font-size:200%;
+}
+      span{
+      font-size:150%;
+      }
+      #demo1 {
+        color:;
+      }
+      #demo2 {
+        color:;
+      }
+      #demo3 {
+        color:;
+      }
+      #demo4 {
+        color:;
+      }
+      #demo5 {
+        color:;
+      }
+     
+        .panel-heading .accordion-toggle:after {
+    content: "\e080";
+    cursor: pointer;
+    font-family: 'Glyphicons Halflings';
+    color: gray;
+  }
+      .panel-heading1 .accordion-toggle1:after {
+    content: "\e080";
+    cursor: pointer;
+    font-family: 'Glyphicons Halflings';
+    color: gray;
+  }
+      .panel-heading2 .accordion-toggle2:after {
+    content: "\e080";
+    cursor: pointer;
+    font-family: 'Glyphicons Halflings';
+    color: gray;
+  }
+      .panel-heading3 .accordion-toggle3:after {
+    content: "\e080";
+    cursor: pointer;
+    font-family: 'Glyphicons Halflings';
+    color: gray;
+  }
+      .panel-heading4 .accordion-toggle4:after {
+    content: "\e080";
+    cursor: pointer;
+    font-family: 'Glyphicons Halflings';
+    color: gray;
+  }
+            
+    </style>
+
+    <script>
+      function myFunctionw() {
+        document.getElementsByClassName("wer")[0].style.display = "block";
+        document.getElementsByClassName("wer")[1].style.display = "block";
+        document.getElementsByClassName("wer")[2].style.display = "block";
+        document.getElementsByClassName("wer")[3].style.display = "block";
+        document.getElementsByClassName("wer")[4].style.display = "block";
+      }
+      function myFunctione() {
+        document.getElementById("uyg").style.display = "block"
+        document.getElementById("gyu").style.display = "none"
+      }
+      function myFunction1() {
+        var mr = document.getElementById("myRadio1").checked;
+        var write;
+        if (mr == false) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo1").innerHTML = write;
+      } /*End*/
+      function myFunction2() {
+        var mr = document.getElementById("myRadio2").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo2").innerHTML = write;
+      } /*End*/
+      function myFunction3() {
+        var mr = document.getElementById("myRadio3").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo3").innerHTML = write;
+      } /*End*/
+      function myFunction4() {
+        var mr = document.getElementById("myRadio4").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo4").innerHTML = write;
+      } /*End*/
+      function myFunction5() {
+        var mr = document.getElementById("myRadio5").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo5").innerHTML = write;
+      } /*End*/
+    </script>
+
+</body>
+</HTML>
