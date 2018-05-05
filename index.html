@@ -16,63 +16,141 @@
      </div>
 	  <img id="mainpic" src="img/mainsimfinal.png">
 	 
-	  <!--Tab01-->
-<section class="containera">
-  <div class="left-half">
-    <article>
-      <h1 class="adf">About the Simulation</h1>
-      <p>You are encouraged to complete all of the steps to get the most out of this simulation. After reading the information, you should complete the specified task or assignment to show your mastery in that particular part of the job application process.</p>
-    </article>
-  </div>
-  <div class="right-half">
-    <article>
-      <h1 class="adf">How to use the Simulation</h1>
-      <p>This job simulation is designed to assist and prepare job seekers for the job application process. In this simulation, you will receive information that will guide you on every step in the job application process. Good luck and thank you for choosing CCA Industries.</p>
-    </article>
-  </div>
-</section>
+	
+	  
+	    <div class="container">
+	<div class="arrows">
+		<div onclick="location.href='www.google.com';" class="arrow step1">
+			<span>Step 1. Choose your job</span>
+		</div>
+		<div onclick="location.href='www.google.com';" class="arrow step2">
+			<span>Step 2. Write your resume</span>
+		</div>
+		<div onclick="location.href='www.google.com';" class="arrow step3">
+			<span>Step 3. Dressing for your interview</span>
+		</div>
+		<div onclick="location.href='www.google.com';" class="arrow step4">
+			<span>Step 4. Evaluate the interview</span>
+		</div>
+		
+	</div>
+</div>
 <style>
 
 
-.containera {
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 1.25rem;
-  line-height: 150%;
-  text-align: center;
-  text-shadow: 0 2px 2px #0d2449;
+
+.container {
+	width: 100%;
+	margin: 30px auto;
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+
+
+
+.arrow {
+	float: left;
+	margin: 0;
+	width: 32%;
+	padding: 25px 10px;
+	position: relative;
+	text-align: center;
 }
 
-.adf {
-  font-size: 1.75rem;
-  margin: 0 0 0.75rem 0;
+.arrow:after {
+	border-top: 34px solid transparent;
+	border-bottom: 34px solid transparent;
+	border-left: 17px solid transparent; 
+	content: "";
+	height: 0;
+	position: absolute;
+	right: -17px;
+	top: 0;
+	width: 0;
+	z-index: 2;
 }
 
-/* Pattern styles */
-.containera {
-  display: flex;
-	height:25vh;
+	.step1:hover{
+		cursor:pointer;
+	}
+.step2:hover{
+		cursor:pointer;
+	}
+	.step3:hover{
+		cursor:pointer;
+	}
+	.step4:hover{
+		cursor:pointer;
+	}
+	
+/* Colour each section */
+.step1 {background-color: #0061ff;}
+.step2 {background-color: #004fce;}
+.step3 {background-color: #0041aa;}
+.step4 {background-color: #003489;}
+
+
+.arrow.step1:after { border-left: 17px solid #0061ff; }
+.arrow.step2:after { border-left: 17px solid #004fce; }
+.arrow.step3:after { border-left: 17px solid #0041aa; }
+
+	
+/* Typography */
+.arrow span {
+	color: #ffffff;
+	position: relative;
 }
 
-.left-half {
-  background-color: #8092af;
-  flex: 1;
-  padding: 1rem;
+
+@media only screen and (max-width: 1440px) {
+	.arrow { width: 31.5%;}
 }
 
-.right-half {
-  background-color: #92a8cc;
-  flex: 1;
-  padding: 1rem;
+@media only screen and (max-width: 10000px) {
+	
+	.arrow {
+		float: none;
+		padding: 25px 30px;
+		text-align: left;
+		width: 100%;
+	}
+	
+	.arrow:first-child {
+		border-radius: 6px 6px 0 0;
+	}
+	
+	.arrow:last-child {
+		border-radius: 0 0 6px 6px;
+	}
+	
+	.arrow:after {
+		top: auto;
+		bottom: -23px;
+		left: 30px;
+		background-color: transparent;
+		border-top: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 17px solid transparent;
+	}
+	
+	.arrow.step1:after {
+		border-top-color: #0061ff;
+		border-left-color: transparent
+	}
+	
+	.arrow.step2:after {
+		border-top-color: #004fce;
+		border-left-color: transparent;
+	}
+	.arrow.step3:after {
+		border-top-color: #0041aa;
+		border-left-color: transparent;
+	}
+	
 }
+
 </style>
-	  <!--/Tab01-->
 	
 	  <div id="welcomew02"><span id="welcomes01">To start, you need to choose your location and what field you want to work in so that you can see jobs in your area that interest you.</span>
 	  </div></div></center>
