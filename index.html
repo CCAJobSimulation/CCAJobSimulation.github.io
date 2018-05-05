@@ -73,6 +73,143 @@ div {
 }
 </style>
 	  <!--/Tab01-->
+	  <div class="container">
+	<div class="arrows">
+		<div onclick="location.href='www.google.com';" class="arrow step1">
+			<span>Step 1. Choose your job</span>
+		</div>
+		<div onclick="location.href='www.google.com';" class="arrow step2">
+			<span>Step 2. Write your resume</span>
+		</div>
+		<div onclick="location.href='www.google.com';" class="arrow step3">
+			<span>Step 3. Dressing for your interview</span>
+		</div>
+		<div onclick="location.href='www.google.com';" class="arrow step4">
+			<span>Step 4. Evaluate the interview</span>
+		</div>
+		
+	</div>
+</div>
+<style>
+
+
+
+.container {
+	width: 100%;
+	margin: 30px auto;
+}
+
+
+
+
+
+.arrow {
+	float: left;
+	margin: 0;
+	width: 32%;
+	padding: 25px 10px;
+	position: relative;
+	text-align: center;
+}
+
+.arrow:after {
+	border-top: 34px solid transparent;
+	border-bottom: 34px solid transparent;
+	border-left: 17px solid transparent; 
+	content: "";
+	height: 0;
+	position: absolute;
+	right: -17px;
+	top: 0;
+	width: 0;
+	z-index: 2;
+}
+
+	.step1:hover{
+		cursor:pointer;
+	}
+.step2:hover{
+		cursor:pointer;
+	}
+	.step3:hover{
+		cursor:pointer;
+	}
+	.step4:hover{
+		cursor:pointer;
+	}
+	
+/* Colour each section */
+.step1 {background-color: #0061ff;}
+.step2 {background-color: #004fce;}
+.step3 {background-color: #0041aa;}
+.step4 {background-color: #003489;}
+
+
+.arrow.step1:after { border-left: 17px solid #0061ff; }
+.arrow.step2:after { border-left: 17px solid #004fce; }
+.arrow.step3:after { border-left: 17px solid #0041aa; }
+.arrow.step4:after { border-left: 17px solid #003489; }
+
+	
+/* Typography */
+.arrow span {
+	color: #ffffff;
+	position: relative;
+}
+
+
+@media only screen and (max-width: 1440px) {
+	.arrow { width: 31.5%;}
+}
+
+@media only screen and (max-width: 10000px) {
+	
+	.arrow {
+		float: none;
+		padding: 25px 30px;
+		text-align: left;
+		width: 100%;
+	}
+	
+	.arrow:first-child {
+		border-radius: 6px 6px 0 0;
+	}
+	
+	.arrow:last-child {
+		border-radius: 0 0 6px 6px;
+	}
+	
+	.arrow:after {
+		top: auto;
+		bottom: -23px;
+		left: 30px;
+		background-color: transparent;
+		border-top: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 17px solid transparent;
+	}
+	
+	.arrow.step1:after {
+		border-top-color: #0061ff;
+		border-left-color: transparent
+	}
+	
+	.arrow.step2:after {
+		border-top-color: #004fce;
+		border-left-color: transparent;
+	}
+	.arrow.step3:after {
+		border-top-color: #0041aa;
+		border-left-color: transparent;
+	}
+	.arrow.step4:after {
+		border-top-color: #003489;
+		border-left-color: transparent;
+	}
+}
+
+</style>
 	  <div id="welcomew02"><span id="welcomes01">To start, you need to choose your location and what field you want to work in so that you can see jobs in your area that interest you.</span>
 	  </div></div></center>
     <!--/ipad--><center>
