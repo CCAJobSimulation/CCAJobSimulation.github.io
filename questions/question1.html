@@ -3,6 +3,9 @@
 
   <head>
     <title>Question 1</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" href="https://lh3.googleusercontent.com/-T-ouPHSaeWU/Wo4RZJ8AVdI/AAAAAAAAAD4/PfGFXFCYKAQlNQBEPDjI93eOur0xEZG2QCEwYBhgL/w140-h140-p/cca.png" sizes="16x16">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -11,6 +14,61 @@
   </head>
 
   <body>
+    <nav class="navbar kidg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img class="navar-brand" src="https://ccaindustries.github.io/img/cca.png" width="90%">
+    </div>
+    <ul class="nav nabvar-nav navbar-right">
+      <li><a class="dyr">Job Simulation</a></li>
+    </ul>
+  </div>
+</nav><div id="qwer"></div>
+<style>
+  #qwer{
+    height:10000px;
+  }
+.dyr{
+padding-top:530%;
+font-size:150%;
+}
+  .navbar{
+background-color:transparent;
+}
+.navbar.solid{
+ background: radial-gradient(#e2e2e2 25%, #e2e2e2 45%, #c4c4c4 90%);
+  opacity:.8;
+}
+.navbar.final{
+ background: radial-gradient(#e2e2e2 25%, #e2e2e2 45%, #c4c4c4 90%);
+  opacity:1;
+}
+.kidg{padding-right:0;padding-left:0}
+.kidg {max-height:340px}
+@media (max-device-width:480px) and (orientation:landscape)
+{.kidg {max-height:200px}}
+.kidg{ top: 0; position: -webkit-sticky;position:sticky;right:0;left:0;z-index:1030}
+@media (min-width:768px){.kidg{border-radius:0}}
+</style>
+<script>
+  $(document).ready(function() {
+        // Transition effect for navbar 
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 40) { 
+              $('.navbar').addClass('solid');
+          } else {
+              $('.navbar').removeClass('solid');
+          }
+           if($(this).scrollTop() > 100) { 
+              $('.navbar').addClass('final');
+          } else {
+              $('.navbar').removeClass('final');
+          }
+            
+});});
+   
+</script>
     <img src="../img/newpinfinal.png"id="imgr" style="width:50%;height:50%;">
     <style>
       #imgr{
