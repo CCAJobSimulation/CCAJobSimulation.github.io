@@ -177,22 +177,22 @@ float:left;
 <body>
                               
 <label class="container"><span>One</span></br>
-<div class="clearfix"><img class="img2" src="img/Model01.png" alt="Model01"><span class="redf">This is another bettetr and faster typing test that i am using to shoe the difference in tie speed and accuracy of my typing and also how fast i can come up with words to test myself on my improvement since last time i took a similar test.</div></span>  <input type="checkbox">
-  <span class="checkmark"></span>
+<div class="clearfix"><img class="img2" src="img/Model01.png" alt="Model01"><span class="redf">This is another bettetr and faster typing test that i am using to shoe the difference in tie speed and accuracy of my typing and also how fast i can come up with words to test myself on my improvement since last time i took a similar test.</div></span>  <input id="check1" type="checkbox">
+      <span class="checkmark"></span><span id="demo01" class="fa giu"></span><span id="model01"></span>
 </label>
 <label class="container"><span>One</span></br>
 <div class="clearfix"><img class="img2" src="img/Model02.png" alt="Model02"><span class="redf">This is another bettetr and faster typing test that i am using to shoe the difference in tie speed and accuracy of my typing and also how fast i can come up with words to test myself on my improvement since last time i took a similar test.</div></span>  <input type="checkbox">
-  <span class="checkmark"></span>
+  <span class="checkmark"></span><span id="demo02" class="fa giu"></span><span id="model02"></span>
 </label>
 <label class="container"><span>One</span></br>
 <div class="clearfix"><img class="img2" src="img/Model03.png" alt="Model03"><span class="redf">This is another bettetr and faster typing test that i am using to shoe the difference in tie speed and accuracy of my typing and also how fast i can come up with words to test myself on my improvement since last time i took a similar test.</div></span>  <input type="checkbox">
-  <span class="checkmark"></span>
+  <span class="checkmark"></span><span id="demo03" class="fa giu"></span><span id="model03"></span>
 </label>
 <label class="container"><span>One</span></br>
 <div class="clearfix"><img class="img2" src="img/Model04.png" alt="Model04"><span class="redf">This is another bettetr and faster typing test that i am using to shoe the difference in tie speed and accuracy of my typing and also how fast i can come up with words to test myself on my improvement since last time i took a similar test</div></span>  <input type="checkbox">
-  <span class="checkmark"></span>
+  <span class="checkmark"></span><span id="demo04" class="fa giu"></span><span id="model04"></span>
 </label>
-<button id="idf" onclick="myFunction(); myFunctionwe()">finish</button> 
+<button id="idf" onclick="myFunction1(); myFunction2(); myFunction3(); myFunction4(); myFunction(); myFunctionwe()">finish</button> 
 <button id="oif">er</button>
 <script>
 function myFunctionwe() {
@@ -200,15 +200,57 @@ function myFunctionwe() {
     document.getElementsByClassName("redf")[1].style.display = "block";
     document.getElementsByClassName("redf")[2].style.display = "block";
     document.getElementsByClassName("redf")[3].style.display = "block";
-    document.getElementsByClassName("redf")[4].style.display = "block";
-    document.getElementsByClassName("redf")[5].style.display = "block";
-    document.getElementsByClassName("redf")[6].style.display = "block";
+
 }
   function myFunction() {
     document.getElementById("idf").style.display = "none"
         document.getElementById("oif").style.display = "block"
   }
-  
+
+      function myFunction1() {
+        var mr = document.getElementById("check1").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo01").innerHTML = write;
+      } 
+      
+        function myFunction2() {
+        var mr = document.getElementById("check2").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo02").innerHTML = write;
+      } 
+      
+        function myFunction3() {
+        var mr = document.getElementById("check3").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo03").innerHTML = write;
+      } 
+      
+        function myFunction4() {
+        var mr = document.getElementById("check4").checked;
+        var write;
+        if (mr == true) {
+          write = "&#xf00d;";
+        } else {
+          write = "&#xf00c;";
+        }
+        document.getElementById("demo04").innerHTML = write;
+      } 
+
 </script>
 </body>
 </html>
